@@ -55,6 +55,7 @@ x_val, y_val = np.expand_dims(val[x], axis=-1), np.expand_dims(val[y], axis=-1)
 # training model
 model = create_model(train=x_train, units=32)
 print(model.summary())
+keras.utils.plot_model(model, to_file=f'./img_file/model/model_{window_step}.png',show_shapes=True)
 history = train_model_ts(model, x_train, y_train, x_val, y_val)
 predict = model.predict(x_test)
 print('======evaluate=======')
