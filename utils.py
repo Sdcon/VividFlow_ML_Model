@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8')
 plt.rcParams['figure.figsize'] = (12, 8)
 
 def one_step_forecast(df, window):
